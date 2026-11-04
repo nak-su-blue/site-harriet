@@ -1,146 +1,169 @@
+/* Configurações base imitando papel de jornal antigo */
+body {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    background-color: #fbf9f1; /* Cor de papel jornal amarelado */
+    color: #111111;
+    margin: 0;
+    padding: 20px 20px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    /* Configurações base imitando papel de jornal antigo */
-    body {
-        font-family: 'Georgia', 'Times New Roman', Times, serif;
-        background-color: #f2efe9; /* Cor de papel jornal amarelado */
-        color: #111111;
-        margin: 0;
-        padding: 40px 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+/* Barra de links estilo "Cadernos/Seções do Jornal" */
+.jornal-nav {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    flex-wrap: wrap;
+}
 
-    /* Manchete / Título Principal */
-    h1 {
-        font-size: 28px;
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: -0.5px;
-        color: #000000;
-        text-align: center;
-        max-width: 650px;
-        margin-bottom: 5px;
-        line-height: 1.2;
-    }
+/* Links Individuais */
+.jornal-nav a {
+    color: #111111;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.2s ease;
+}
 
-    /* Subtítulo / Linha de Apoio */
-    h2 {
-        font-size: 16px;
-        font-style: italic;
-        font-weight: normal;
-        color: #333333;
-        text-align: center;
-        margin-top: 0;
-        margin-bottom: 25px;
-        max-width: 600px;
-    }
+/* Efeito ao passar o mouse nos links */
+.jornal-nav a:hover {
+    color: #666666;
+    text-decoration: underline;
+}
 
-    /* O bloco da "Matéria" onde fica o formulário */
-    form {
-        background-color: #fbf9f1;
-        /* Linhas pretas duplas em cima e embaixo, típicas de diagramação editorial */
-        border-top: 4px double #000000;
-        border-bottom: 4px double #000000;
-        border-left: none;
-        border-right: none;
-        padding: 25px 10px;
-        width: 100%;
-        max-width: 500px;
-        box-sizing: border-box;
-    }
+/* Manchete / Título Principal */
+h1 {
+    font-size: 28px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    color: #000000;
+    text-align: center;
+    max-width: 650px;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
 
-    /* Organização dos blocos em linhas de notícias */
-    form > div {
-        margin-bottom: 18px;
-        padding-bottom: 12px;
-        border-bottom: 1px dotted #888888; /* Linha pontilhada separando as seções */
-    }
+/* Subtítulo / Linha de Apoio */
+h2 {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: normal;
+    color: #333333;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    max-width: 600px;
+}
 
-    /* Remove a linha pontilhada do último bloco antes do botão */
-    form > div:nth-last-of-type(1) {
-        border-bottom: none;
-        margin-bottom: 25px;
-    }
+/* O bloco da "Matéria" onde fica o formulário */
+form {
+    background-color: #fbf9f1;
+    border-top: 4px double #000000;
+    border-bottom: 4px double #000000;
+    padding: 25px 10px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
 
-    /* Rótulos dos campos (Labels) parecendo subtópicos de notícias */
-    label, form p {
-        display: block;
-        font-size: 13px;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        margin-bottom: 6px;
-        color: #000000;
-    }
+/* Organização dos blocos em linhas */
+form > div {
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px dotted #888888;
+}
 
-    form p {
-        margin-bottom: 8px;
-    }
+form > div:nth-last-of-type(1) {
+    border-bottom: none;
+    margin-bottom: 25px;
+}
 
-    /* Caixas de texto com estilo minimalista de preenchimento de cupom impresso */
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"] {
-        width: 100%;
-        padding: 8px 5px;
-        background: transparent;
-        border: 1px solid #000000;
-        font-family: 'Georgia', serif;
-        font-size: 16px;
-        box-sizing: border-box;
-    }
+/* Rótulos dos campos (Labels) */
+label, form p {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    color: #000000;
+}
 
-    /* Muda sutilmente o fundo ao focar para dar feedback de digitação */
-    input[type="text"]:focus,
-    input[type="email"]:focus,
-    input[type="tel"]:focus {
-        background-color: #ffffff;
-        outline: 1px solid #000000;
-    }
+form p {
+    margin-bottom: 8px;
+}
 
-    /* Alinhamento das caixas de seleção (Checkboxes) */
-    div:has(input[type="checkbox"]) {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
+/* Caixas de texto minimalistas de cupom impresso */
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 8px 5px;
+    background: transparent;
+    border: 1px solid #000000;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
 
-    /* Texto ao lado do checkbox */
-    input[type="checkbox"] + label {
-        display: inline;
-        font-family: 'Georgia', serif;
-        font-size: 14px;
-        font-weight: normal;
-        text-transform: none;
-        letter-spacing: 0;
-        cursor: pointer;
-    }
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+    background-color: #ffffff;
+    outline: 1px solid #000000;
+}
 
-    /* Espaçamento entre os blocos internos de opções */
-    input[id="home"] + label {
-        margin-right: 20px;
-    }
+/* Alinhamento dos Checkboxes */
+div:has(input[type="checkbox"]) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
 
-    /* Botão de envio imitando um anúncio ou carimbo oficial em preto e branco */
-    button[type="submit"] {
-        width: 100%;
-        background-color: #000000;
-        color: #fbf9f1;
-        border: 1px solid #000000;
-        padding: 12px;
-        font-family: 'Georgia', serif;
-        font-size: 16px;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        cursor: pointer;
-        transition: all 0.2s ease;
-    }
+input[type="checkbox"] + label {
+    display: inline;
+    font-family: 'Georgia', serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: none;
+    letter-spacing: 0;
+    cursor: pointer;
+}
 
-    /* Efeito de inversão de cores clássico ao passar o mouse */
-    button[type="submit"]:hover {
-        background-color: transparent;
-        color: #000000;
-    }
+input[id="home"] + label {
+    margin-right: 20px;
+}
+
+/* Botão de envio imitando um anúncio ou carimbo oficial */
+button[type="submit"] {
+    width: 100%;
+    background-color: #000000;
+    color: #fbf9f1;
+    border: 1px solid #000000;
+    padding: 12px;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: transparent;
+    color: #000000;
+}
+

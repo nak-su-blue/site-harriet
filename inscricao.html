@@ -1,4 +1,4 @@
-<!DOCTYPE= html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -7,12 +7,12 @@
     <title>inscrição</title>
 </head>
 <body>
-    
+    <nav class="jornal-nav">
     <a href="filantropia.html">Filantropia</a>
     <a href="ferrovia.html">Ferrovia Subterrânea</a>
     <a href="movimento.html">Movimento sufragista</a>
     <a href="index.html">Home</a>
-
+    </nav>
     <h1>organizações e museus sem fins lucrativos criados em memória de Harriet Bennet:</h1>
     <h2>Gostaria de contribuir para algum?Se sim, inscreva-se abaixo:</h2>
     <form action="requisicao.php" method="post">
@@ -33,7 +33,7 @@
             <input type="tel" name="contato" id="contato" pattern="\(\d{2}\)\s9\d{4}-\d{4}" placeholder="(00) 90000-0000" required>
         </div>
         <div>
-            <input type="checkbox" name="home" id="home">
+            <input type="checkbox" name="home" id="home" value="sim">
             <label for="home">Home</label>
             
             <input type="checkbox" name="museu" id="museu" value="sim">

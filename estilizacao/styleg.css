@@ -1,4 +1,4 @@
-/* Importação de fontes clássicas do Google Fonts */
+/* Importação de fontes clássicas */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Special+Elite&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap');
 
 /* Configurações Gerais da Folha de Jornal */
@@ -6,31 +6,16 @@ body {
     background-color: #f2efe9;
     color: #2b2b2b;
     font-family: 'Merriweather', Georgia, serif;
-    margin: 0;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-/* Efeito de folha centralizada */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: radial-gradient(circle, rgba(0,0,0,0) 60%, rgba(0,0,0,0.05) 100%);
-    pointer-events: none;
-}
-
-/* Container que limita a largura como um jornal físico */
-body {
     max-width: 900px;
     margin: 30px auto;
     padding: 40px;
     background-color: #fbf9f4;
     border: 1px solid #dcd7ce;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
-/* Menu de Navegação - Estilo Carimbo / Seções do Jornal */
+/* Menu de Navegação - Estilo Carimbo */
 a {
     display: inline-block;
     color: #1a1a1a;
@@ -51,37 +36,24 @@ a:hover {
     color: #fbf9f4;
 }
 
-/* Título Principal (Manchete do Jornal) */
+/* Título Principal (Manchete) */
 h1 {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     font-weight: 900;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin: 10px 0 20px 0;
+    margin: 10px 0 25px 0;
     padding-bottom: 15px;
     border-bottom: 4px double #1a1a1a;
     line-height: 1.1;
 }
 
-/* Subtítulo / Olho da Notícia */
-h2 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.5rem;
-    font-style: italic;
-    font-weight: 400;
-    text-align: center;
-    color: #4a4a4a;
-    margin: 20px 0 25px 0;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #1a1a1a;
-}
-
 /* Imagem da Notícia */
 img {
     display: block;
-    max-width: 280px;
+    max-width: 260px;
     height: auto;
     float: left;
     margin: 5px 25px 15px 0;
@@ -95,14 +67,15 @@ img {
 /* Corpo do Texto / Artigo */
 p {
     font-size: 1.05rem;
-    line-height: 1.7;
+    line-height: 1.75;
     text-align: justify;
     text-justify: inter-word;
     margin-top: 0;
+    margin-bottom: 20px;
 }
 
-/* Capitular (Primeira letra grande estilo jornalístico) */
-p::first-letter {
+/* Capitular APENAS na primeira letra do PRIMEIRO parágrafo */
+body > p:first-of-type::first-letter {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 3.8rem;
     float: left;
